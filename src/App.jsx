@@ -14,7 +14,7 @@ import User from "./pages/User";
 import Admin from "./pages/Admin";
 import Orders from "./components/Orders/Orders";
 import UpdateUser from "./components/UpdateUser/UpdateUser";
-import PlaceOrder from "./pages/placeOrder";
+import PlaceOrder from "./pages/PlaceOrder";
 
 function App() {
   return (

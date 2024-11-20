@@ -1,11 +1,13 @@
-import React, { createContext } from "react";
+import React, { createContext, useContext } from "react";
 import axios from "axios";
+import { CategoryContext } from "./CategoryContext";
 
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
+  const { url } = useContext(CategoryContext);
   axios
-    .get("http://localhost:3000/product/all")
+    .get(url + "product/all")
     .then((response) => {
       window.localStorage.setItem("product", JSON.stringify(response.data));
     })

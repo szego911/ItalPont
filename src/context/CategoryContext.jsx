@@ -5,7 +5,7 @@ export const CategoryContext = createContext(null);
 
 const CategoryContextProvider = (props) => {
   const live = true;
-  const url = live ? "https://rf1-italpont-production.up.railway.app/" : "http://localhost:3000/";
+  const url = "https://rf1-italpont-production.up.railway.app/";
   const contextValue = { categories, url };
 
   return (

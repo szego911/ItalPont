@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "./CSS/signup.css";
+import "./CSS/Signup.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { CategoryContext } from "../context/CategoryContext";

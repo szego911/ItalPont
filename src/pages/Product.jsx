@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Breadcrum from "../Components/Breadcrums/Breadcrum";
-import ProductDisplay from "../Components/ProductDisplay/ProductDisplay";
+import Breadcrum from "../components/Breadcrums/Breadcrum.jsx";
+import ProductDisplay from "src/components/ProductDisplay/ProductDisplay.jsx";
 
 const Product = () => {
   const products = JSON.parse(window.localStorage.getItem("product"));

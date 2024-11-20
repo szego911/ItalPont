@@ -6,6 +6,7 @@ export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
   const { url } = useContext(CategoryContext);
+  console.log(url);
   axios
     .get(url + "product/all")
     .then((response) => {
@@ -13,18 +14,12 @@ const ShopContextProvider = (props) => {
     })
     .catch((error) => {
       console.error(error);
-      console.log("Termékeket nem sikerült elérni");
+      console.log(url);
+      console.log(url + "Termékeket nem sikerült elérni");
     });
 
-  //const contextValue = window.localStorage.getItem("product");
-  //console.log(contextValue);
-
-  //const contextValue = { ital_product };
-
   return (
-    <ShopContext.Provider value={" "}>
-      {props.children}
-    </ShopContext.Provider>
+    <ShopContext.Provider value={" "}>{props.children}</ShopContext.Provider>
   );
 };
 
